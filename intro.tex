@@ -1,0 +1,232 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+\geometry{margin=0.5in} % for example, change the margins to 0.5 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+\usepackage{color}
+\usepackage{enumitem}
+
+%\Setlist{wide=\parindent}
+
+%%% MATH PACKAGES
+\usepackage{amsmath, amsfonts, amssymb, amsthm} % you may call more than one pacakge at once
+
+%%% MATH SECTIONS
+\theoremstyle{plain}% default
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{prob}{Problem}
+\newtheorem{soln}{Solution}
+\newtheorem*{soln*}{Solution}
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}    }%
+}
+
+%%% END Assignment format customizations
+
+
+%%% The "real" document content comes below...
+
+%Every document must begin ``\begin{document)}'' and end ``\end{document}''. If either of these lines is removed, your document will not compile.
+\begin{document}
+
+%Heading information
+\title{Your Name} %Your name goes here
+\subtitle{MATH 275 - Logic and Sets} %Class Name
+\author{Introduction to Form} % Assignment Name
+\date{Due Date TBA} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+         
+\maketitle
+
+%To make a new section, use the command \section{Title of Section Goes Here}. Use * to suppress numbering. Compare below
+
+\section{Section with Numbering}
+
+\section*{Section without Numbering}
+
+%Use the ``soln'' style to write your problem solutions. Your solution must begin ``\begin{soln}'' and end ``\end{soln}''.
+\begin{soln}
+	Solution with automatic numbering.
+\end{soln}
+
+%Use the ``soln*'' if you want to suppress numbering
+\begin{soln*}
+	Solution with no numbering.
+\end{soln*}
+
+%Use the ``soln*'' along with [] if you want to insert a particular number
+\begin{soln*}[3.2.13]
+	Solution with custom numbering.
+\end{soln*}
+
+
+%Use the ``align'' to left-align a string of equations with respect to a point of reference.
+
+\section*{Align}
+Use the align environment for strings of equations. The \& symbol indicates where you want to align your text. The default mode for align is math so no dollar signs are needed. For some reason, \textbf{your code will not compile if there are any are blank lines (carriage returns) anywhere within the beginning and end of an align environment}. The end of each line should end with \textbackslash \textbackslash.
+
+%The ``align'' environment (vs ``align*'') will number each line individually. Take the asterisk out (in BOTH the beginning and the end) to see how it changes the compiled text.
+
+\begin{align*} 
+(x + y)(x - y) &= x(x - y) + y(x - y)\\
+ &= x^2 -xy + yx - y^2 \\
+ &=x^2 + y^2
+\end{align*}
+
+%Feel free to use color for your solutions, but please pick a color that is readable on a computer screen (avoid light/pastel colors)
+
+{\color{red}
+\textbf{Instructions}
+	\begin{enumerate}
+		\item Complete the problems below in \TeX, writing each solution after its corresponding problem statement in the ``soln'' environment OR all solutions in a separate section at the end of this document. 
+		\item Use ``Align'' when you are writing a string of more than one equality. 
+		\item Write your solutions in the text and math environments respectively, when appropriate. Points will be deducted if text and math type is not properly formatted. See the code for the problem statements as an example.
+		\item The introductory text (from this line and above - in the code, from the \} below up to the \textbackslash maketitle command) should be deleted from your final document so that it begins with the problem section.
+\end{enumerate}
+}
+
+\section*{Problems}
+
+
+
+\begin{prob}
+Consider cylinder $A$ with radius $r$ and height $h$. Suppose the radius and height of cylinder $B$ are proportional to $r$ and $h$ respectively with constant of proportionality $2$. Show that
+\begin{enumerate}[leftmargin=.5cm,itemindent=.5cm,labelwidth=\itemindent,labelsep=0cm,align=left,label=\alph*),ref=\alph*]
+	\item the surface area of cylinder $B$ is proportional to the surface area of cylinder $A$ with constant of proportionality $4$ and
+	\item the volume of cylinder $B$ is proportional to the volume of cylinder $A$ with constant of proportionality $8$.
+\end{enumerate}
+\end{prob}
+
+
+
+
+\begin{prob}
+Consider cylinder A with radius $r$ and height $h$. Suppose the radius and height of cylinder B are proportional to $r$ and $h$ respectively with constant of proportionality $k$. Show that 
+
+\begin{enumerate}[leftmargin=.5cm,itemindent=.5cm,labelwidth=\itemindent,labelsep=0cm,align=left,label=\alph*),ref=\alph*]
+	\item the surface area of cylinder B is proportional to the surface area of cylinder A with constant of proportionality $k^2$ and 
+	\item the volume of cylinder B is proportional to the volume of cylinder A with constant of proportionality $k^3$.
+\end{enumerate}
+\end{prob}
+
+
+
+
+\begin{prob}
+Consider two cups shaped like cylinders where cup $A$ is twice as tall as cup $B$ and the diameter of cup $B$ is twice the diameter of cup $A$. Show that the volume of cup $B$ is proportional to the volume of cup $A$ with constant of proportionality $k = 2$.
+\end{prob}
+
+
+\begin{prob}
+Show that the sum of two even integers is also even.
+\end{prob}
+
+
+
+
+
+\begin{prob}
+Show that the sum of two odd integers is even.
+\end{prob}
+
+
+
+\begin{prob}
+Show that the product of two even integers is also even.
+\end{prob}
+
+
+
+\begin{prob}
+Show that the product of two odd integers is also odd.
+\end{prob}
+
+
+
+\begin{prob}
+Show that the sum of squares of two consecutive integers is odd.
+\end{prob}
+
+
+
+\begin{prob}
+Show that the sum of two even functions is also even.
+\end{prob}
+
+
+
+
+\begin{prob}
+Show that the sum of two odd functions is also odd.
+\end{prob}
+
+
+
+\begin{prob}
+Show that any function $f(x)$ can be expressed as the sum of an even function and an odd function.
+
+\begin{enumerate}[leftmargin=.5cm,itemindent=.5cm,labelwidth=\itemindent,labelsep=0cm,align=left,label=\alph*),ref=\alph*]
+	\item Let $g(x) = \frac{\left( f(x) + f(-x) \right)}{2} $. Show that that $g(x)$ is even.
+	\item Let $h(x) = \frac{ \left(f(x) - f(-x)\right)}{2}$. Show that that $h(x)$ is odd.
+	\item Show that $f(x) = g(x) + h(x)$.
+\end{enumerate}
+
+\end{prob}
+
+\end{document}
